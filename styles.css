@@ -1,0 +1,119 @@
+body {
+  background-color: #d5d5d5;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+h1 {
+  font-weight: 400;
+  margin: 30px 4px 0 0;
+}
+
+h2 {
+  font-weight: 400;
+  color: #5F6059;
+  margin-left: 4px;
+}
+
+h4 {
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 0.85rem;
+}
+
+a:visited {
+  color: black;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+/* IMAGE GRID STYLES  */
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: calc(100%/3);
+  max-width: calc(100%/3);
+  box-sizing: border-box;
+  padding: 0 4px;
+}
+
+.column img {
+  margin: 0;
+  vertical-align: middle;
+  width: 100%;
+}
+
+@media screen and (max-width: 900px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+
+  p {
+    font-size: .85rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+.img-container {
+  position: relative;
+  margin: 0 0 8px 0;
+  vertical-align: middle;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.triangle {
+  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.7) 50%, rgba(255, 255, 255, 0) 50%);
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  padding: 10px 30px;
+  position: absolute;
+  top: 0;
+  transition: .5s ease;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+.triangle>p {
+  width: 50%;
+}
+
+.img-container:hover .triangle {
+  opacity: 1;
+} 
+
+.img-container>a:focus .triangle {
+  opacity: 1;
+}
+
+/* FOOTER STYLES */
+
+footer {
+  padding: 20px 0 50px 0;
+}
+
+footer > a {
+  margin: 10px;
+}
+
+footer > a:hover {
+  color: white;
+}
+
